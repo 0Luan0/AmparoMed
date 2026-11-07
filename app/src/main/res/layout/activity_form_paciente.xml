@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/creme">
+
+    <include layout="@layout/layout_barra_topo" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="16dp">
+
+            <TextView style="@style/Texto.CampoLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Nome completo" />
+            <EditText android:id="@+id/edit_nome_pac" style="@style/Campo" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="6dp" android:inputType="textCapWords" />
+
+            <TextView style="@style/Texto.CampoLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="Data de nascimento" />
+            <LinearLayout android:id="@+id/campo_nascimento_form" android:layout_width="match_parent" android:layout_height="48dp" android:orientation="horizontal" android:gravity="center_vertical" android:background="@drawable/bg_input" android:clickable="true" android:focusable="true" android:paddingLeft="12dp" android:layout_marginTop="6dp">
+                <ImageView android:layout_width="18dp" android:layout_height="18dp" android:layout_marginEnd="8dp" android:src="@drawable/ic_calendar" app:tint="@color/verde_principal" />
+                <TextView android:id="@+id/txt_nascimento_form" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="14/03/1954" android:textSize="15sp" android:fontFamily="sans-serif-medium" android:textColor="@color/verde_tinta" />
+            </LinearLayout>
+
+            <TextView style="@style/Texto.CampoLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="Idade (calculada)" />
+            <TextView android:id="@+id/txt_idade_form" android:layout_width="match_parent" android:layout_height="48dp" android:gravity="center_vertical" android:background="@drawable/bg_segmento_container" android:paddingLeft="12dp" android:text="72 anos" android:textSize="15sp" android:fontFamily="sans-serif-medium" android:textColor="@color/texto_secundario" android:layout_marginTop="6dp" />
+
+            <TextView style="@style/Texto.CampoLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="CPF" />
+            <EditText android:id="@+id/edit_cpf_pac" style="@style/Campo" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="6dp" android:inputType="number" />
+
+            <TextView style="@style/Texto.CampoLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="Alergias a medicamentos" />
+            <EditText android:id="@+id/edit_alergias" style="@style/Campo" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp" android:gravity="top" android:paddingTop="12dp" android:paddingBottom="12dp" android:layout_marginTop="6dp" android:hint="Separe por vírgula" android:inputType="textMultiLine" />
+
+            <TextView style="@style/Texto.CampoLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="Doenças" />
+            <EditText android:id="@+id/edit_doencas" style="@style/Campo" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp" android:gravity="top" android:paddingTop="12dp" android:paddingBottom="12dp" android:layout_marginTop="6dp" android:hint="Separe por vírgula" android:inputType="textMultiLine" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/rodape_form_pac"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="12dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_salvar_pac"
+            style="@style/Botao.Primario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Salvar alterações" />
+    </LinearLayout>
+
+</LinearLayout>

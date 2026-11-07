@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  FONTES: o prototipo usa Plus Jakarta Sans. Como os .ttf nao estao no projeto,
+  mapeamos para a familia do sistema (Roboto). Quando as fontes chegarem, troque
+  cada android:fontFamily por @font/plus_jakarta_sans_{regular,medium,bold,extrabold}.
+-->
+<resources>
+
+    <style name="Texto.TituloTela" parent="">
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:textSize">19sp</item>
+        <item name="android:textColor">@color/verde_tinta</item>
+    </style>
+
+    <style name="Texto.NomeCabecalho" parent="">
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/branco</item>
+    </style>
+
+    <style name="Texto.Rotulo" parent="">
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/verde_principal</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.1</item>
+    </style>
+
+    <style name="Texto.Rotulo.Terracota" parent="Texto.Rotulo">
+        <item name="android:textColor">@color/terracota</item>
+    </style>
+
+    <style name="Texto.Meta" parent="">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/texto_secundario</item>
+    </style>
+
+    <style name="Texto.ItemTitulo" parent="">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/verde_tinta</item>
+    </style>
+
+    <style name="Texto.ItemSub" parent="">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/texto_secundario</item>
+        <item name="android:fontFeatureSettings">tnum</item>
+    </style>
+
+    <style name="Texto.CampoLabel" parent="">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/texto_secundario</item>
+    </style>
+
+    <style name="Texto.Ajuda" parent="">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/texto_secundario</item>
+    </style>
+
+    <style name="Texto.Valor" parent="">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/verde_tinta</item>
+        <item name="android:fontFeatureSettings">tnum</item>
+    </style>
+
+    <style name="Texto.DialogoTitulo" parent="">
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:textSize">19sp</item>
+        <item name="android:textColor">@color/verde_tinta</item>
+    </style>
+
+    <style name="Botao.Primario" parent="Widget.Material3.Button">
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/branco</item>
+        <item name="android:minHeight">52dp</item>
+        <item name="backgroundTint">@color/verde_principal</item>
+        <item name="cornerRadius">14dp</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconPadding">8dp</item>
+        <item name="iconSize">20dp</item>
+        <item name="iconTint">@color/branco</item>
+    </style>
+
+    <style name="Botao.Contorno" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/verde_principal</item>
+        <item name="android:minHeight">52dp</item>
+        <item name="backgroundTint">@color/branco</item>
+        <item name="cornerRadius">14dp</item>
+        <item name="strokeColor">@color/verde_principal</item>
+        <item name="strokeWidth">2dp</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconPadding">8dp</item>
+        <item name="iconSize">20dp</item>
+        <item name="iconTint">@color/verde_principal</item>
+    </style>
+
+    <style name="Botao.Emergencia" parent="Widget.Material3.Button">
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/branco</item>
+        <item name="android:minHeight">58dp</item>
+        <item name="android:letterSpacing">0.12</item>
+        <item name="android:elevation">6dp</item>
+        <item name="backgroundTint">@color/vermelho</item>
+        <item name="cornerRadius">14dp</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconPadding">8dp</item>
+        <item name="iconSize">22dp</item>
+        <item name="iconTint">@color/branco</item>
+    </style>
+
+    <style name="Botao.Neutro" parent="Widget.Material3.Button">
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/verde_tinta</item>
+        <item name="android:minHeight">52dp</item>
+        <item name="backgroundTint">@color/bege_escuro</item>
+        <item name="cornerRadius">14dp</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconPadding">8dp</item>
+        <item name="iconSize">20dp</item>
+        <item name="iconTint">@color/verde_tinta</item>
+    </style>
+
+    <style name="Botao.Perigo" parent="Widget.Material3.Button">
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/branco</item>
+        <item name="android:minHeight">52dp</item>
+        <item name="backgroundTint">@color/vermelho</item>
+        <item name="cornerRadius">14dp</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconPadding">8dp</item>
+        <item name="iconSize">20dp</item>
+        <item name="iconTint">@color/branco</item>
+    </style>
+
+    <style name="Botao.PerigoContorno" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/vermelho</item>
+        <item name="android:minHeight">52dp</item>
+        <item name="backgroundTint">@color/branco</item>
+        <item name="cornerRadius">14dp</item>
+        <item name="strokeColor">@color/vermelho</item>
+        <item name="strokeWidth">2dp</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconPadding">8dp</item>
+        <item name="iconSize">20dp</item>
+        <item name="iconTint">@color/vermelho</item>
+    </style>
+
+    <style name="Botao.Mini" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/verde_principal</item>
+        <item name="android:minHeight">34dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="backgroundTint">@color/branco</item>
+        <item name="cornerRadius">10dp</item>
+        <item name="strokeColor">@color/verde_principal</item>
+        <item name="strokeWidth">2dp</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconPadding">6dp</item>
+        <item name="iconSize">15dp</item>
+        <item name="iconTint">@color/verde_principal</item>
+    </style>
+
+    <style name="Botao.Mini.Cheio" parent="Botao.Mini">
+        <item name="android:textColor">@color/branco</item>
+        <item name="backgroundTint">@color/verde_principal</item>
+        <item name="iconTint">@color/branco</item>
+    </style>
+
+    <style name="Campo" parent="">
+        <item name="android:background">@drawable/bg_input</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@color/verde_tinta</item>
+        <item name="android:textColorHint">@color/texto_riscado</item>
+    </style>
+
+    <style name="AmparoChip" parent="Widget.Material3.Chip.Filter">
+        <item name="android:checkable">true</item>
+        <item name="checkedIconVisible">false</item>
+        <item name="chipCornerRadius">10dp</item>
+        <item name="chipMinHeight">38dp</item>
+        <item name="chipStrokeWidth">1.5dp</item>
+        <item name="chipBackgroundColor">@color/chip_fundo</item>
+        <item name="chipStrokeColor">@color/chip_borda</item>
+        <item name="android:textColor">@color/chip_texto</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="ensureMinTouchTargetSize">false</item>
+    </style>
+
+    <style name="NavIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/verde_claro</item>
+    </style>
+
+    <style name="TextAppearance.Nav.Ativo" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.Nav.Inativo" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+</resources>

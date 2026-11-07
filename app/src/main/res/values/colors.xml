@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="verde_principal">#2C6A5D</color>
+    <color name="verde_tinta">#1B241F</color>
+    <color name="creme">#F9F8F4</color>
+    <color name="bege_escuro">#F0EDE8</color>
+    <color name="terracota">#C97655</color>
+    <color name="roxo">#745DA1</color>
+    <color name="roxo_claro">#F3F0F9</color>
+    <color name="vermelho">#B63D34</color>
+    <color name="vermelho_claro">#FEEBEA</color>
+    <color name="pessego">#BA7A5E</color>
+    <color name="pessego_claro">#FEF3ED</color>
+    <color name="verde_claro">#EEF4F2</color>
+    <color name="texto_secundario">#66706B</color>
+    <color name="texto_riscado">#8A9690</color>
+    <color name="borda">#E6E2DA</color>
+    <color name="borda_alerta">#F3D9CB</color>
+    <color name="pegador">#D6D1C8</color>
+    <color name="branco">#FFFFFF</color>
+    <color name="branco_16">#29FFFFFF</color>
+    <color name="halo_emergencia">#2EB63D34</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

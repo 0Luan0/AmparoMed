@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/creme">
+
+    <include layout="@layout/layout_barra_topo" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="16dp">
+
+            <TextView style="@style/Texto.CampoLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Nome completo" />
+            <EditText android:id="@+id/edit_nome_cuid" style="@style/Campo" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="6dp" android:inputType="textCapWords" />
+
+            <TextView style="@style/Texto.CampoLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="Vínculo com o paciente" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:background="@drawable/bg_segmento_container" android:padding="4dp" android:layout_marginTop="6dp">
+                <TextView android:id="@+id/seg_familiar" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:gravity="center" android:text="Familiar" android:textSize="14sp" android:textStyle="bold" android:textColor="@color/segmento_texto" android:background="@drawable/bg_segmento_item" />
+                <TextView android:id="@+id/seg_cuidador" android:layout_width="0dp" android:layout_height="40dp" android:layout_weight="1" android:gravity="center" android:text="Cuidador" android:textSize="14sp" android:textStyle="bold" android:textColor="@color/segmento_texto" android:background="@drawable/bg_segmento_item" />
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/grupo_parentesco" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+                <TextView style="@style/Texto.CampoLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="Parentesco" />
+                <EditText android:id="@+id/edit_parentesco" style="@style/Campo" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="6dp" android:hint="Ex.: Filho" android:inputType="textCapWords" />
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="10dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                    <TextView style="@style/Texto.CampoLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Idade" />
+                    <EditText android:id="@+id/edit_idade" style="@style/Campo" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="6dp" android:inputType="number" />
+                </LinearLayout>
+                <Space android:layout_width="10dp" android:layout_height="wrap_content" />
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2" android:orientation="vertical">
+                    <TextView style="@style/Texto.CampoLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="CPF" />
+                    <EditText android:id="@+id/edit_cpf" style="@style/Campo" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="6dp" android:hint="000.000.000-00" android:inputType="number" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView style="@style/Texto.CampoLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="Telefone" />
+            <EditText android:id="@+id/edit_tel" style="@style/Campo" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="6dp" android:inputType="phone" android:drawableStart="@drawable/ic_phone" android:drawablePadding="10dp" android:drawableTint="@color/texto_secundario" />
+
+            <TextView style="@style/Texto.CampoLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="E-mail" />
+            <EditText android:id="@+id/edit_email" style="@style/Campo" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="6dp" android:inputType="textEmailAddress" android:drawableStart="@drawable/ic_mail" android:drawablePadding="10dp" android:drawableTint="@color/texto_secundario" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/rodape_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="12dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_salvar_cuid"
+            style="@style/Botao.Primario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Salvar alterações"
+            android:enabled="false" />
+    </LinearLayout>
+
+</LinearLayout>

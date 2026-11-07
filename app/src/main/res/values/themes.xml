@@ -1,0 +1,28 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.AmparoMed" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/verde_principal</item>
+        <item name="colorOnPrimary">@color/branco</item>
+        <item name="colorSecondary">@color/terracota</item>
+        <item name="colorError">@color/vermelho</item>
+        <item name="colorSurface">@color/branco</item>
+        <item name="colorOnSurface">@color/verde_tinta</item>
+        <item name="android:colorBackground">@color/creme</item>
+        <item name="android:windowBackground">@color/creme</item>
+        <item name="android:textColorPrimary">@color/verde_tinta</item>
+        <item name="android:textColorSecondary">@color/texto_secundario</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.AmparoMed.BottomSheet</item>
+    </style>
+
+    <style name="ThemeOverlay.AmparoMed.BottomSheet" parent="ThemeOverlay.Material3.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="bottomSheetStyle">@style/AmparoBottomSheet</item>
+    </style>
+
+    <style name="AmparoBottomSheet" parent="Widget.Material3.BottomSheet.Modal">
+        <item name="backgroundTint">@android:color/transparent</item>
+    </style>
+</resources>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/raiz_hist"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:layout_marginBottom="9dp"
+    android:background="@drawable/bg_card_tomado">
+
+    <FrameLayout
+        android:layout_width="42dp"
+        android:layout_height="42dp">
+
+        <FrameLayout
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_gravity="top|start"
+            android:background="@drawable/bg_oval_branco">
+
+            <ImageView
+                android:id="@+id/img_relogio"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_clock"
+                app:tint="@color/verde_principal" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frame_selo"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_gravity="bottom|end"
+            android:background="@drawable/bg_selo_ok">
+
+            <ImageView
+                android:id="@+id/img_selo"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_check"
+                app:tint="@color/branco" />
+        </FrameLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginStart="12dp">
+
+        <TextView
+            android:id="@+id/txt_hist_nome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Losartana 50mg"
+            android:textSize="15sp"
+            android:fontFamily="sans-serif-medium"
+            android:textStyle="bold"
+            android:textColor="@color/verde_tinta" />
+
+        <TextView
+            android:id="@+id/txt_hist_sub"
+            style="@style/Texto.Meta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 comprimido · 12:00" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_hist_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tomado"
+        android:textSize="12sp"
+        android:fontFamily="sans-serif-black"
+        android:textColor="@color/verde_principal" />
+
+</LinearLayout>

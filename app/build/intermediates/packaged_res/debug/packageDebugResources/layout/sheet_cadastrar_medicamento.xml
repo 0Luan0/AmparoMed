@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_sheet">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="20dp">
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_pegador" />
+
+        <TextView
+            style="@style/Texto.DialogoTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cadastrar medicamento" />
+
+        <TextView
+            style="@style/Texto.CampoLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Nome do medicamento" />
+
+        <EditText
+            android:id="@+id/edit_nome"
+            style="@style/Campo"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="6dp"
+            android:hint="Losartana"
+            android:inputType="textCapWords" />
+
+        <TextView
+            style="@style/Texto.CampoLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Forma farmacêutica" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_segmento_container"
+            android:padding="4dp"
+            android:layout_marginTop="6dp">
+
+            <TextView
+                android:id="@+id/seg_solida"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Sólida"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/segmento_texto"
+                android:background="@drawable/bg_segmento_item"
+                android:drawableStart="@drawable/ic_pill"
+                android:drawablePadding="6dp"
+                android:drawableTint="@color/segmento_texto" />
+
+            <TextView
+                android:id="@+id/seg_liquida"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Líquida"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/segmento_texto"
+                android:background="@drawable/bg_segmento_item"
+                android:drawableStart="@drawable/ic_drop"
+                android:drawablePadding="6dp"
+                android:drawableTint="@color/segmento_texto" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/Texto.Ajuda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Sólida: comprimido, cápsula. Líquida: xarope, gotas, solução." />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/Texto.CampoLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dosagem" />
+
+                <EditText
+                    android:id="@+id/edit_dosagem"
+                    style="@style/Campo"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="6dp"
+                    android:hint="50 mg"
+                    android:inputType="text" />
+            </LinearLayout>
+
+            <Space android:layout_width="10dp" android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/Texto.CampoLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tipo" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_input"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="10dp"
+                    android:layout_marginTop="6dp">
+
+                    <Spinner
+                        android:id="@+id/spinner_tipo"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null" />
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@drawable/ic_chevron_down"
+                        app:tint="@color/texto_secundario" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            style="@style/Texto.CampoLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Quantidade em estoque" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="6dp">
+
+            <ImageButton
+                android:id="@+id/btn_qcad_menos"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_input"
+                android:scaleType="center"
+                android:src="@drawable/ic_minus"
+                app:tint="@color/verde_principal"
+                android:contentDescription="Diminuir" />
+
+            <TextView
+                android:id="@+id/txt_qtd_cad"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:text="30 unidades"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-black"
+                android:textColor="@color/verde_tinta"
+                android:background="@drawable/bg_input" />
+
+            <ImageButton
+                android:id="@+id/btn_qcad_mais"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_input"
+                android:scaleType="center"
+                android:src="@drawable/ic_plus"
+                app:tint="@color/verde_principal"
+                android:contentDescription="Aumentar" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/Texto.Ajuda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Se for líquido, a quantidade é em ml." />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_cancelar_cad"
+                style="@style/Botao.Neutro"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cancelar" />
+
+            <Space android:layout_width="10dp" android:layout_height="wrap_content" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_cadastrar"
+                style="@style/Botao.Primario"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cadastrar"
+                android:enabled="false" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

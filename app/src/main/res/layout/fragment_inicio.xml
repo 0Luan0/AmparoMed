@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/creme">
+
+    <LinearLayout
+        android:id="@+id/cabecalho"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/verde_principal"
+        android:paddingBottom="18dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingLeft="22dp"
+            android:paddingRight="22dp"
+            android:paddingTop="6dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_saudacao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Boa tarde"
+                    android:textColor="@color/branco"
+                    android:alpha="0.8"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/txt_nome"
+                    style="@style/Texto.NomeCabecalho"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Maria Clara" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/btn_sino"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:background="@drawable/bg_oval_branco_16"
+                android:clickable="true"
+                android:focusable="true"
+                android:contentDescription="Simular alarme do próximo remédio">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_bell"
+                    app:tint="@color/branco" />
+
+                <View
+                    android:layout_width="9dp"
+                    android:layout_height="9dp"
+                    android:layout_gravity="top|end"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="11dp"
+                    android:background="@drawable/bg_ponto_notificacao" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/txt_rotulo_dia"
+                style="@style/Texto.Rotulo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="HOJE" />
+
+            <TextView
+                android:id="@+id/txt_contador"
+                style="@style/Texto.Meta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 de 0 tomados" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/lista_hoje"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="9dp"
+            android:clipToPadding="false" />
+
+        <TextView
+            android:id="@+id/txt_vazio"
+            style="@style/Texto.Meta"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Nenhum lembrete para hoje."
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/card_estoque_baixo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_card_alerta"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_marginTop="9dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/ic_alert"
+                app:tint="@color/terracota" />
+
+            <TextView
+                android:id="@+id/txt_alerta"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:text="Losartana acabando: 3 cps"
+                android:textColor="@color/terracota"
+                android:textSize="13sp"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:id="@+id/btn_repor_alerta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Repor"
+                android:textColor="@color/terracota"
+                android:textSize="13sp"
+                android:fontFamily="sans-serif-black"
+                android:paddingLeft="8dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:clickable="true"
+                android:focusable="true" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_adicionar"
+            style="@style/Botao.Contorno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:text="Adicionar lembrete"
+            app:icon="@drawable/ic_plus" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_emergencia"
+            style="@style/Botao.Emergencia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:text="EMERGÊNCIA"
+            app:icon="@drawable/ic_phone" />
+
+    </LinearLayout>
+
+</LinearLayout>

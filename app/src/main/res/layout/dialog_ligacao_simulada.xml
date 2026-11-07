@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@drawable/bg_dialog"
+    android:paddingLeft="18dp"
+    android:paddingRight="18dp"
+    android:paddingTop="22dp"
+    android:paddingBottom="18dp">
+
+    <FrameLayout
+        android:id="@+id/circulo_ligacao"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:background="@drawable/bg_nucleo_emergencia">
+
+        <ImageView
+            android:id="@+id/img_lig_fone"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_phone"
+            app:tint="@color/branco" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/txt_lig_titulo"
+        style="@style/Texto.DialogoTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="Ligando para Rosa Souza" />
+
+    <TextView
+        android:id="@+id/txt_lig_numero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="(11) 98765-4321"
+        android:textSize="15sp"
+        android:textColor="@color/texto_secundario" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Simulação: este protótipo não faz ligações reais."
+        android:textSize="12sp"
+        android:textColor="@color/texto_secundario" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_encerrar"
+        style="@style/Botao.Perigo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Encerrar" />
+
+</LinearLayout>

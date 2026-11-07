@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_tela">16dp</dimen>
+    <dimen name="espaco_itens">9dp</dimen>
+    <dimen name="raio_card">14dp</dimen>
+    <dimen name="altura_botao">52dp</dimen>
+    <dimen name="altura_emergencia">58dp</dimen>
+    <dimen name="altura_campo">48dp</dimen>
+</resources>

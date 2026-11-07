@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/creme">
+
+    <include layout="@layout/layout_barra_topo" />
+
+    <LinearLayout
+        android:id="@+id/corpo_perfil"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_card_grande"
+            android:padding="14dp">
+
+            <TextView
+                android:id="@+id/txt_ini_perfil"
+                android:layout_width="58dp"
+                android:layout_height="58dp"
+                android:gravity="center"
+                android:background="@drawable/bg_oval_roxo_claro"
+                android:text="RS"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-black"
+                android:textColor="@color/roxo" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="14dp">
+
+                <TextView
+                    android:id="@+id/txt_nome_perfil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rosa Souza"
+                    android:textSize="19sp"
+                    android:fontFamily="sans-serif-black"
+                    android:textColor="@color/verde_tinta" />
+
+                <TextView
+                    android:id="@+id/txt_badge_perfil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/bg_badge_roxo"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:text="Cuidador(a)"
+                    android:textSize="12sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textStyle="bold"
+                    android:textColor="@color/roxo" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card_grande"
+            android:padding="14dp"
+            android:layout_marginTop="9dp">
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingTop="4dp" android:paddingBottom="10dp">
+                <FrameLayout android:layout_width="36dp" android:layout_height="36dp" android:background="@drawable/bg_chip_verde"><ImageView android:layout_width="17dp" android:layout_height="17dp" android:layout_gravity="center" android:src="@drawable/ic_user" app:tint="@color/verde_principal" /></FrameLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="12dp">
+                    <TextView style="@style/Texto.CampoLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Idade" />
+                    <TextView android:id="@+id/txt_idade_perfil" style="@style/Texto.Valor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="45 anos" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/borda" />
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingTop="10dp" android:paddingBottom="10dp">
+                <FrameLayout android:layout_width="36dp" android:layout_height="36dp" android:background="@drawable/bg_chip_verde"><ImageView android:layout_width="17dp" android:layout_height="17dp" android:layout_gravity="center" android:src="@drawable/ic_phone" app:tint="@color/verde_principal" /></FrameLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="12dp">
+                    <TextView style="@style/Texto.CampoLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Telefone" />
+                    <TextView android:id="@+id/txt_tel_perfil" style="@style/Texto.Valor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="(11) 98765-4321" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/borda" />
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingTop="10dp" android:paddingBottom="10dp">
+                <FrameLayout android:layout_width="36dp" android:layout_height="36dp" android:background="@drawable/bg_chip_verde"><ImageView android:layout_width="17dp" android:layout_height="17dp" android:layout_gravity="center" android:src="@drawable/ic_mail" app:tint="@color/verde_principal" /></FrameLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="12dp">
+                    <TextView style="@style/Texto.CampoLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="E-mail" />
+                    <TextView android:id="@+id/txt_email_perfil" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="rosa.souza@email.com" android:textSize="14sp" android:fontFamily="sans-serif-medium" android:textStyle="bold" android:textColor="@color/verde_tinta" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/borda" />
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingTop="10dp" android:paddingBottom="4dp">
+                <FrameLayout android:layout_width="36dp" android:layout_height="36dp" android:background="@drawable/bg_chip_verde"><ImageView android:layout_width="17dp" android:layout_height="17dp" android:layout_gravity="center" android:src="@drawable/ic_id_card" app:tint="@color/verde_principal" /></FrameLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="12dp">
+                    <TextView style="@style/Texto.CampoLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="CPF" />
+                    <TextView android:id="@+id/txt_cpf_perfil" style="@style/Texto.Valor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="987.654.321-00" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_ligar_perfil"
+            style="@style/Botao.Primario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:text="Ligar para Rosa"
+            app:icon="@drawable/ic_phone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="9dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_editar_perfil"
+                style="@style/Botao.Contorno"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Editar"
+                app:icon="@drawable/ic_edit" />
+
+            <Space android:layout_width="10dp" android:layout_height="wrap_content" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_remover_perfil"
+                style="@style/Botao.PerigoContorno"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Remover"
+                app:icon="@drawable/ic_trash" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

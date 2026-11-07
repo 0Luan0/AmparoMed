@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AmparoMed</string>
+    <string name="nav_inicio">Início</string>
+    <string name="nav_historico">Histórico</string>
+    <string name="nav_estoque">Estoque</string>
+    <string name="nav_pessoas">Pessoas</string>
+</resources>
