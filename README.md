@@ -134,13 +134,73 @@ O que é real e o que é simplificado
 - **Dados**: na primeira abertura, o app é populado com um cenário de exemplo (paciente, remédios, cuidadores e histórico). A partir daí, os dados ficam salvos no banco.
 - **Ligações e emergência**: **simuladas** — o app mostra um diálogo em vez de discar. Num app real, o acionamento do 192 usaria `Intent.ACTION_DIAL`.
 
-Autores
--------
+## Equipe AmparoMed
 
-- Igor Vicente José da Silva
-- Lucas Teixeira Oliveira
-- Luan Lucena dos Anjos — [@0Luan0](https://github.com/0Luan0)
-- Mateus dos Santos Araújo
-- Rafhael César Araújo Paulino
+<p align="center">
+  <img src="docs/equipe/equipe-amparomed.jpeg" alt="Equipe AmparoMed" width="700">
+</p>
 
-Projeto desenvolvido para a disciplina de Desenvolvimento de Aplicações, sob orientação do professor Jadir Custodio Mendonça Júnior — UNICID.
+<p align="center">
+  <strong>Equipe responsável pelo desenvolvimento do AmparoMed</strong>
+</p>
+
+### Conheça os integrantes
+
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="docs/equipe/mateus.png" alt="Mateus dos Santos" width="150">
+      <br>
+      <strong>Mateus dos Santos Araújo</strong>
+      <br>
+      <sub>Função: Líder e projetista de Banco de Dados</sub>
+      <br>
+      <a href="https://github.com/araujosantos20">@araujosantos20</a>
+    </td>
+    <td align="center" width="50%">
+      <img src="docs/equipe/igor.jpeg" alt="Igor Vicente" width="150">
+      <br>
+      <strong>Igor Vicente José da Silva</strong>
+      <br>
+      <sub>Função: Analista</sub>
+      <br>
+      <a href="https://github.com/HARD2407">@Igor Vicente</a>
+    </td>
+    <td align="center" width="50%">
+      <img src="docs/equipe/lucas.jpeg" alt="Lucas Teixeira" width="150">
+      <br>
+      <strong>Lucas Teixeira Oliveira</strong>
+      <br>
+      <sub>Função: Desenvolvedor</sub>
+      <br>
+      <a href="https://github.com/Lucas0liveiraT">@Lucas0liveira</a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="#" alt="Luan Lucena" width="150">
+      <br>
+      <strong>Luan Lucena dos Anjos</strong>
+      <br>
+      <sub>Função: Testador</sub>
+      <br>
+      <a href="https://github.com/0Luan0">@0Luan0</a>
+    </td>
+    <td align="center" width="50%">
+      <img src="docs/equipe/rafhael.jpeg" alt="Rafhael César" width="150">
+      <br>
+      <strong>Rafhael César Araújo Paulino</strong>
+      <br>
+      <sub>Função: Documentador</sub>
+      <br>
+      <a href="https://github.com/_RafhaelCesar">@_RafhaelCesar</a>
+    </td>
+    <td></td>
+  </tr>
+</table>
+
+---
+
+### Informações acadêmicas
+
+Projeto desenvolvido para a disciplina de **Desenvolvimento de Aplicações**, sob orientação do professor **Jadir Custodio Mendonça Júnior**, na **Universidade Cidade de São Paulo (UNICID)**.
