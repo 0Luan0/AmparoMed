@@ -193,7 +193,7 @@ O que é real e o que é simplificado
       <br>
       <sub>Função: Documentador</sub>
       <br>
-      <a href="https://github.com/_RafhaelCesar">@_RafhaelCesar</a>
+      <a href="https://github.com/RafhaelCesar">@_RafhaelCesar</a>
     </td>
     <td></td>
   </tr>
