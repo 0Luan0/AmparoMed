@@ -1,70 +1,105 @@
-AmparoMed
-=========
+<div align="center">
 
-Aplicativo Android de apoio ao cuidado de pacientes dependentes — idosos, acamados ou pessoas com necessidades contínuas de saúde. Centraliza os lembretes de medicação, o controle de estoque de remédios, o histórico de doses, os contatos de familiares e cuidadores e um acionamento rápido de emergência, reduzindo a sobrecarga de quem cuida e aumentando a segurança de quem é cuidado.
+# AmparoMed
 
-![Java](https://img.shields.io/badge/Java-17-orange)
-![Android](https://img.shields.io/badge/Android-minSdk%2026-3DDC84)
-![Material 3](https://img.shields.io/badge/UI-Material%203-6750A4)
-![SQLite](https://img.shields.io/badge/Banco-SQLite%20(Room)-003B57)
+**Apoio ao cuidado de pacientes dependentes: lembretes de medicação, controle de estoque, histórico de doses e acionamento rápido de emergência.**
+
+![Java](https://img.shields.io/badge/Java-17-orange?logo=openjdk&logoColor=white)
+![Android](https://img.shields.io/badge/Android-minSdk%2026-3DDC84?logo=android&logoColor=white)
+![Material 3](https://img.shields.io/badge/UI-Material%203-6750A4?logo=materialdesign&logoColor=white)
+![Room](https://img.shields.io/badge/Banco-SQLite%20(Room)-003B57?logo=sqlite&logoColor=white)
+![Gradle](https://img.shields.io/badge/Gradle-8.9-02303A?logo=gradle&logoColor=white)
 ![Status](https://img.shields.io/badge/status-prot%C3%B3tipo%20acad%C3%AAmico-informational)
+
+<p>
+  <img src="design/screens/03-inicio.png" width="200" alt="Tela Início" />
+  <img src="design/screens/06-historico.png" width="200" alt="Tela Histórico" />
+  <img src="design/screens/07-estoque.png" width="200" alt="Tela Estoque" />
+  <img src="design/screens/05-emergencia.png" width="200" alt="Tela Emergência" />
+</p>
+
+</div>
 
 > Projeto acadêmico do curso de Análise e Desenvolvimento de Sistemas (ADS) da Universidade Cidade de São Paulo (UNICID).
 
-Telas
------
+## Sumário
 
-<p>
-  <img src="design/screens/03-inicio.png" width="200" alt="Início" />
-  <img src="design/screens/06-historico.png" width="200" alt="Histórico" />
-  <img src="design/screens/07-estoque.png" width="200" alt="Estoque" />
-  <img src="design/screens/05-emergencia.png" width="200" alt="Emergência" />
-</p>
+- [Sobre o projeto](#sobre-o-projeto)
+- [Funcionalidades](#funcionalidades)
+- [Telas](#telas)
+- [Arquitetura](#arquitetura)
+- [Estrutura do repositório](#estrutura-do-repositório)
+- [Tecnologias](#tecnologias)
+- [Como executar](#como-executar)
+- [Banco de dados](#banco-de-dados)
+- [Escopo e limitações](#escopo-e-limitações)
+- [Próximos passos](#próximos-passos)
+- [Equipe](#equipe)
+- [Informações acadêmicas](#informações-acadêmicas)
 
-Sobre o projeto
----------------
+## Sobre o projeto
 
-Grande parte do cuidado domiciliar ainda é organizada à mão — anotações em papel, alarmes avulsos no celular ou a memória de quem cuida. Isso abre espaço para esquecimentos de medicação, falta de remédio em casa e demora para agir numa emergência. O **AmparoMed** nasceu para dar um apoio ativo ao cuidador, reunindo numa única plataforma simples o que antes ficava espalhado.
+Grande parte do cuidado domiciliar ainda é organizada à mão: anotações em papel, alarmes avulsos no celular ou a memória de quem cuida. Esse cenário favorece esquecimentos de medicação, falta de remédio em casa e demora para agir em emergências.
 
-O app foi pensado em torno de três papéis:
+O **AmparoMed** é um aplicativo Android que oferece apoio ativo ao cuidador, reunindo em uma única plataforma simples o que normalmente fica espalhado. O objetivo é reduzir a sobrecarga de quem cuida e aumentar a segurança de quem é cuidado.
 
-| Papel | O que faz no app |
+### Papéis do sistema
+
+| Papel | Descrição |
 |---|---|
-| **Paciente** | Pessoa cuidada. Tem perfil com dados, alergias e doenças; é o centro dos lembretes e do histórico. |
-| **Cuidador** | Familiar ou cuidador profissional. Usa o app no dia a dia: confirma doses, controla estoque, aciona emergência. |
-| **Contatos** | Familiares e cuidadores cadastrados, acionáveis rapidamente — inclusive na tela de emergência. |
+| **Paciente** | Pessoa cuidada. Possui perfil com dados, alergias e doenças, e é o centro dos lembretes e do histórico. |
+| **Cuidador** | Familiar ou cuidador profissional. Usa o app no dia a dia para confirmar doses, controlar o estoque e acionar emergências. |
+| **Contatos** | Familiares e cuidadores cadastrados, acionáveis rapidamente, inclusive pela tela de emergência. |
 
-Funcionalidades
----------------
+## Funcionalidades
 
-- **Lembretes de medicação** por horário, com confirmação de dose (tomado / não tomado).
-- **Controle de estoque** com aviso automático de remédio acabando e reposição rápida.
-- **Histórico** de doses tomadas e não tomadas, com filtros (hoje / 7 dias / 30 dias).
-- **Cadastro de medicamentos** (sólidos e líquidos) e de **lembretes**.
-- **Pessoas**: perfil do paciente e lista de cuidadores/familiares, com cadastro e edição.
-- **Emergência**: botão para o SAMU (192) e ligação rápida para os contatos (simulada no protótipo).
-- **Login e cadastro** de usuário (telas visuais).
-- **Persistência local** em banco de dados SQLite — os dados sobrevivem ao fechar o app.
+**Medicação**
+- Lembretes por horário, com confirmação de dose (tomado / não tomado).
+- Cadastro de medicamentos (sólidos e líquidos) e de lembretes.
+- Histórico de doses tomadas e não tomadas, com filtros de período (hoje, 7 dias e 30 dias).
 
-Telas do app
-------------
+**Estoque**
+- Controle de estoque por medicamento.
+- Aviso automático de remédio acabando.
+- Reposição rápida.
 
-| Entrada | Início | Alarme |
-|---|---|---|
-| ![Login](design/screens/01-login.png) | ![Início](design/screens/03-inicio.png) | ![Alarme](design/screens/04-alarme.png) |
+**Pessoas e emergência**
+- Perfil do paciente e lista de cuidadores/familiares, com cadastro e edição.
+- Tela de emergência com botão para o SAMU (192) e ligação rápida para os contatos (simulada no protótipo).
 
-| Estoque | Cadastrar medicamento | Repor estoque |
-|---|---|---|
-| ![Estoque](design/screens/07-estoque.png) | ![Cadastrar](design/screens/08-cadastrar-medicamento.png) | ![Repor](design/screens/09-repor.png) |
+**Geral**
+- Telas de login e cadastro de usuário (apenas visuais).
+- Persistência local em SQLite: os dados permanecem após o fechamento do app.
+- Funcionamento 100% offline.
 
-| Histórico | Pessoas (paciente) | Perfil do cuidador |
-|---|---|---|
-| ![Histórico](design/screens/06-historico.png) | ![Paciente](design/screens/10-paciente.png) | ![Perfil](design/screens/12-perfil-cuidador.png) |
+## Telas
 
-Arquitetura
------------
+<table align="center">
+  <tr>
+    <td align="center"><img src="design/screens/01-login.png" width="200" alt="Login" /><br /><sub><b>Login</b></sub></td>
+    <td align="center"><img src="design/screens/03-inicio.png" width="200" alt="Início" /><br /><sub><b>Início</b></sub></td>
+    <td align="center"><img src="design/screens/04-alarme.png" width="200" alt="Alarme" /><br /><sub><b>Alarme</b></sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="design/screens/07-estoque.png" width="200" alt="Estoque" /><br /><sub><b>Estoque</b></sub></td>
+    <td align="center"><img src="design/screens/08-cadastrar-medicamento.png" width="200" alt="Cadastrar medicamento" /><br /><sub><b>Cadastrar medicamento</b></sub></td>
+    <td align="center"><img src="design/screens/09-repor.png" width="200" alt="Repor estoque" /><br /><sub><b>Repor estoque</b></sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="design/screens/06-historico.png" width="200" alt="Histórico" /><br /><sub><b>Histórico</b></sub></td>
+    <td align="center"><img src="design/screens/05-emergencia.png" width="200" alt="Emergência" /><br /><sub><b>Emergência</b></sub></td>
+    <td align="center"><img src="design/screens/10-paciente.png" width="200" alt="Paciente" /><br /><sub><b>Pessoas (paciente)</b></sub></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="design/screens/12-perfil-cuidador.png" width="200" alt="Perfil do cuidador" /><br /><sub><b>Perfil do cuidador</b></sub></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
 
-O app segue uma separação clara entre interface, regra de negócio e persistência. A UI nunca fala direto com o banco: tudo passa pelo repositório.
+## Arquitetura
+
+O app mantém uma separação clara entre interface, regras de negócio e persistência. A UI nunca acessa o banco diretamente: todo acesso passa pelo repositório.
 
 ```mermaid
 flowchart LR
@@ -74,133 +109,154 @@ flowchart LR
     SEED["SeedData (dados de exemplo)"] --> REPO
 ```
 
-- **UI**: 4 abas (Início, Histórico, Estoque, Pessoas) dentro de uma `MainActivity` com `BottomNavigationView`; telas de detalhe (Alarme, Emergência, Perfil, Formulários) são Activities próprias.
-- **Repositório**: ponto único de acesso aos dados. Mantém um cache em memória para a UI e faz *write-through* no banco a cada alteração.
-- **Banco**: SQLite via **Room**. Na primeira abertura, o banco é semeado com dados de exemplo; depois, é carregado do disco.
+| Camada | Responsabilidade |
+|---|---|
+| **UI** | Quatro abas (Início, Histórico, Estoque e Pessoas) dentro de uma `MainActivity` com `BottomNavigationView`. As telas de detalhe (Alarme, Emergência, Perfil e Formulários) são Activities próprias. |
+| **Repositório** | Ponto único de acesso aos dados. Mantém um cache em memória para a UI e faz *write-through* no banco a cada alteração. |
+| **Regras de negócio** | `EstoqueCalculadora` concentra os cálculos e as regras de estoque. |
+| **Banco de dados** | SQLite via Room. Na primeira abertura, o banco é populado com dados de exemplo; nas seguintes, é carregado do disco. |
 
-Estrutura do repositório
-------------------------
+## Estrutura do repositório
 
 | Caminho | Conteúdo |
 |---|---|
-| `app/src/main/java/.../model` | Entidades (Medicamento, Lembrete, Cuidador, Paciente, RegistroDose) e enums. |
+| `app/src/main/java/.../model` | Entidades (`Medicamento`, `Lembrete`, `Cuidador`, `Paciente`, `RegistroDose`) e enums. |
 | `app/src/main/java/.../data` | Repositório, calculadora de estoque e dados de exemplo. |
 | `app/src/main/java/.../data/db` | Banco Room: `AppDatabase`, DAOs e conversores de tipo. |
-| `app/src/main/java/.../ui` | Telas: fragments das abas, activities de detalhe, adapters e diálogos. |
+| `app/src/main/java/.../ui` | Fragments das abas, Activities de detalhe, adapters e diálogos. |
 | `app/src/main/res` | Layouts, cores, estilos, ícones e drawables. |
 | `design/` | Documentação e capturas de tela. |
+| `docs/equipe/` | Fotos da equipe utilizadas neste README. |
 
-Tecnologias
------------
+## Tecnologias
 
-- **Linguagem**: Java 17.
-- **Plataforma**: Android (minSdk 26, compileSdk/targetSdk 35).
-- **UI**: XML com Views tradicionais e **Material 3** (sem Jetpack Compose).
-- **Banco de dados**: **SQLite** via **Room** 2.6.
-- **Build**: Gradle 8.9 / Android Gradle Plugin 8.7.3.
-- Sem dependências de rede: o app funciona 100% offline.
-
-Como rodar
-----------
-
-**Pré-requisitos:** Android Studio, JDK 21 e um emulador ou dispositivo com Android 8.0 (API 26) ou superior.
-
-```bash
-git clone https://github.com/0Luan0/AmparoMed.git
-```
-
-1. Abra o projeto no Android Studio (`File > Open` apontando para a pasta `AmparoMed`).
-2. Quando perguntado, selecione **Use JVM 21** (o JDK 25 embutido é incompatível com o Gradle 8.9).
-3. Aguarde o **Gradle Sync**.
-4. Clique em **Run** (▶) e escolha um emulador arm64.
-
-Banco de dados
---------------
-
-Banco SQLite local (`amparomed.db`), criado pelo Room. Principais tabelas:
-
-| Tabela | Guarda |
+| Categoria | Tecnologia |
 |---|---|
-| `medicamento` | Remédios do estoque (nome, dosagem, forma, tipo, quantidade). |
-| `lembrete` | Regras de quando tomar cada remédio (horário, intervalo, duração). |
+| Linguagem | Java 17 |
+| Plataforma | Android (minSdk 26, compileSdk/targetSdk 35) |
+| Interface | XML com Views tradicionais e Material 3 (sem Jetpack Compose) |
+| Banco de dados | SQLite via Room 2.6 |
+| Build | Gradle 8.9 e Android Gradle Plugin 8.7.3 |
+| Rede | Nenhuma dependência: o app funciona 100% offline |
+
+## Como executar
+
+### Pré-requisitos
+
+- [Android Studio](https://developer.android.com/studio)
+- JDK 21
+- Emulador ou dispositivo com Android 8.0 (API 26) ou superior
+
+### Passo a passo
+
+1. Clone o repositório:
+
+   ```bash
+   git clone https://github.com/0Luan0/AmparoMed.git
+   cd AmparoMed
+   ```
+
+2. Abra o projeto no Android Studio (`File > Open`, apontando para a pasta `AmparoMed`).
+3. Quando solicitado, selecione **Use JVM 21**.
+4. Aguarde a conclusão do **Gradle Sync**.
+5. Clique em **Run** (▶) e escolha um emulador arm64.
+
+> [!IMPORTANT]
+> O JDK 25 embutido em algumas versões do Android Studio é incompatível com o Gradle 8.9. Caso a build falhe, confirme em `Settings > Build, Execution, Deployment > Build Tools > Gradle` que o **Gradle JDK** está configurado para a versão 21.
+
+## Banco de dados
+
+O app utiliza um banco SQLite local (`amparomed.db`), criado e gerenciado pelo Room.
+
+| Tabela | Conteúdo |
+|---|---|
+| `medicamento` | Remédios do estoque (nome, dosagem, forma, tipo e quantidade). |
+| `lembrete` | Regras de quando tomar cada remédio (horário, intervalo e duração). |
 | `registro_dose` | Histórico de doses tomadas e não tomadas. |
 | `cuidador` | Familiares e cuidadores (contatos). |
 | `paciente` | Dados do paciente (linha única). |
 
-O que é real e o que é simplificado
------------------------------------
+## Escopo e limitações
 
-- **Login e cadastro**: telas **visuais**, sem autenticação real (qualquer entrada abre o app). É um protótipo acadêmico.
-- **Dados**: na primeira abertura, o app é populado com um cenário de exemplo (paciente, remédios, cuidadores e histórico). A partir daí, os dados ficam salvos no banco.
-- **Ligações e emergência**: **simuladas** — o app mostra um diálogo em vez de discar. Num app real, o acionamento do 192 usaria `Intent.ACTION_DIAL`.
+Por se tratar de um protótipo acadêmico, alguns recursos são intencionalmente simplificados:
 
-## Equipe AmparoMed
+| Recurso | Situação atual |
+|---|---|
+| **Login e cadastro** | Telas visuais, sem autenticação real. Qualquer entrada abre o app. |
+| **Dados iniciais** | Na primeira abertura, o app é populado com um cenário de exemplo (paciente, remédios, cuidadores e histórico). A partir daí, os dados ficam salvos no banco. |
+| **Ligações e emergência** | Simuladas: o app exibe um diálogo em vez de discar. |
+
+## Próximos passos
+
+- [ ] Implementar autenticação real de usuários.
+- [ ] Acionar o SAMU (192) e os contatos de forma real, utilizando `Intent.ACTION_DIAL`.
+
+## Equipe
 
 <p align="center">
   <img src="docs/equipe/equipe-amparomed.jpeg" alt="Equipe AmparoMed" width="700">
+  <br>
+  <sub><b>Equipe responsável pelo desenvolvimento do AmparoMed</b></sub>
 </p>
-
-<p align="center">
-  <strong>Equipe responsável pelo desenvolvimento do AmparoMed</strong>
-</p>
-
-### Conheça os integrantes
 
 <table>
   <tr>
-    <td align="center" width="50%">
-      <img src="docs/equipe/mateus.png" alt="Mateus dos Santos" width="150" height="150">
+    <td align="center" width="33%">
+      <img src="docs/equipe/mateus.png" alt="Mateus dos Santos Araújo" width="120" height="120">
       <br>
       <strong>Mateus dos Santos Araújo</strong>
       <br>
-      <sub>Função: Líder e projetista de Banco de Dados</sub>
+      <sub>Líder e projetista de Banco de Dados</sub>
       <br>
       <a href="https://github.com/araujosantos20">@araujosantos20</a>
     </td>
-    <td align="center" width="50%">
-      <img src="docs/equipe/igor.jpg" alt="Igor Vicente" width="150" height="150">
+    <td align="center" width="33%">
+      <img src="docs/equipe/igor.jpg" alt="Igor Vicente José da Silva" width="120" height="120">
       <br>
       <strong>Igor Vicente José da Silva</strong>
       <br>
-      <sub>Função: Analista</sub>
+      <sub>Analista</sub>
       <br>
-      <a href="https://github.com/HARD2407">@Igor Vicente</a>
+      <a href="https://github.com/HARD2407">@HARD2407</a>
     </td>
-    <td align="center" width="50%">
-      <img src="docs/equipe/lucas.jpeg" alt="Lucas Teixeira" width="150" height="150">
+    <td align="center" width="33%">
+      <img src="docs/equipe/lucas.jpeg" alt="Lucas Teixeira Oliveira" width="120" height="120">
       <br>
       <strong>Lucas Teixeira Oliveira</strong>
       <br>
-      <sub>Função: Desenvolvedor</sub>
+      <sub>Desenvolvedor</sub>
       <br>
-      <a href="https://github.com/Lucas0liveiraT">@Lucas0liveira</a>
+      <a href="https://github.com/Lucas0liveiraT">@Lucas0liveiraT</a>
     </td>
   </tr>
   <tr>
-    <td align="center" width="50%">
-      <img src="#" alt="Luan Lucena" width="150" height="150">
+    <td align="center" width="33%">
+      <img src="https://github.com/0Luan0.png?size=120" alt="Luan Lucena dos Anjos" width="120" height="120">
       <br>
       <strong>Luan Lucena dos Anjos</strong>
       <br>
-      <sub>Função: Testador</sub>
+      <sub>Testador</sub>
       <br>
       <a href="https://github.com/0Luan0">@0Luan0</a>
     </td>
-    <td align="center" width="50%">
-      <img src="docs/equipe/rafhael.jpg" alt="Rafhael César" width="150" height="150">
+    <td align="center" width="33%">
+      <img src="docs/equipe/rafhael.jpg" alt="Rafhael César Araújo Paulino" width="120" height="120">
       <br>
       <strong>Rafhael César Araújo Paulino</strong>
       <br>
-      <sub>Função: Documentador</sub>
+      <sub>Documentador</sub>
       <br>
-      <a href="https://github.com/RafhaelCesar">@_RafhaelCesar</a>
+      <a href="https://github.com/RafhaelCesar">@RafhaelCesar</a>
     </td>
     <td></td>
   </tr>
 </table>
 
----
+## Informações acadêmicas
 
-### Informações acadêmicas
-
-Projeto desenvolvido para a disciplina de **Desenvolvimento de Aplicações**, sob orientação do professor **Jadir Custodio Mendonça Júnior**, na **Universidade Cidade de São Paulo (UNICID)**.
+| | |
+|---|---|
+| **Instituição** | Universidade Cidade de São Paulo (UNICID) |
+| **Curso** | Análise e Desenvolvimento de Sistemas (ADS) |
+| **Disciplina** | Desenvolvimento de Aplicações |
+| **Orientador** | Prof. Jadir Custodio Mendonça Júnior |
