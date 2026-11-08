@@ -7,3 +7,7 @@
 /captures
 .externalNativeBuild
 .cxx
+# build de qualquer modulo (corrige /build que so pegava a raiz)
+build/
+/app/build
+*.apk

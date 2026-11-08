@@ -23,7 +23,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-/** Tela cheia de alarme (tela 04). Voltar pelo sistema fecha SEM registrar. */
+/** Tela cheia de alarme (tela 04). O botao Voltar (ou o voltar do sistema) fecha SEM registrar. */
 public class AlarmeActivity extends AppCompatActivity {
 
     private Ocorrencia ocorrencia;
@@ -53,6 +53,8 @@ public class AlarmeActivity extends AppCompatActivity {
 
         findViewById(R.id.btn_confirmar).setOnClickListener(v -> confirmar());
         findViewById(R.id.btn_nao_tomei).setOnClickListener(v -> naoTomei());
+        // Botao de voltar: fecha a tela SEM registrar (caso tenha aberto sem querer).
+        findViewById(R.id.btn_voltar).setOnClickListener(v -> finish());
     }
 
     private void preencher(Medicamento m, Lembrete l, LocalDateTime dataHora) {
