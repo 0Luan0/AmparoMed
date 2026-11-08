@@ -231,7 +231,7 @@ Por se tratar de um protótipo acadêmico, alguns recursos são intencionalmente
   </tr>
   <tr>
     <td align="center" width="33%">
-      <img src="docs/equipe/luan.jpeg" alt="Luan Lucena dos Anjos" width="120" height="120">
+      <img src="docs/equipe/luan.jpg" alt="Luan Lucena dos Anjos" width="120" height="120">
       <br>
       <strong>Luan Lucena dos Anjos</strong>
       <br>
