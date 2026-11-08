@@ -149,7 +149,7 @@ O que é real e o que é simplificado
 <table>
   <tr>
     <td align="center" width="50%">
-      <img src="docs/equipe/mateus.png" alt="Mateus dos Santos" width="150">
+      <img src="docs/equipe/mateus.png" alt="Mateus dos Santos" width="150" height="150">
       <br>
       <strong>Mateus dos Santos Araújo</strong>
       <br>
@@ -158,7 +158,7 @@ O que é real e o que é simplificado
       <a href="https://github.com/araujosantos20">@araujosantos20</a>
     </td>
     <td align="center" width="50%">
-      <img src="docs/equipe/igor.jpeg" alt="Igor Vicente" width="150">
+      <img src="docs/equipe/igor.jpeg" alt="Igor Vicente" width="150" height="150">
       <br>
       <strong>Igor Vicente José da Silva</strong>
       <br>
@@ -167,7 +167,7 @@ O que é real e o que é simplificado
       <a href="https://github.com/HARD2407">@Igor Vicente</a>
     </td>
     <td align="center" width="50%">
-      <img src="docs/equipe/lucas.jpeg" alt="Lucas Teixeira" width="150">
+      <img src="docs/equipe/lucas.jpeg" alt="Lucas Teixeira" width="150" height="150">
       <br>
       <strong>Lucas Teixeira Oliveira</strong>
       <br>
@@ -178,7 +178,7 @@ O que é real e o que é simplificado
   </tr>
   <tr>
     <td align="center" width="50%">
-      <img src="#" alt="Luan Lucena" width="150">
+      <img src="#" alt="Luan Lucena" width="150" height="150">
       <br>
       <strong>Luan Lucena dos Anjos</strong>
       <br>
@@ -187,7 +187,7 @@ O que é real e o que é simplificado
       <a href="https://github.com/0Luan0">@0Luan0</a>
     </td>
     <td align="center" width="50%">
-      <img src="docs/equipe/rafhael.jpeg" alt="Rafhael César" width="150">
+      <img src="docs/equipe/rafhael.jpeg" alt="Rafhael César" width="150" height="150">
       <br>
       <strong>Rafhael César Araújo Paulino</strong>
       <br>
