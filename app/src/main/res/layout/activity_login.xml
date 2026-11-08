@@ -45,9 +45,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:layout_marginBottom="32dp"
-            android:text="Seus remédios, na hora certa."
-            android:textSize="14sp"
-            android:textColor="@color/texto_secundario" />
+            android:text="Cuidado Organizado. Tranquilidade de Verdade."
+            android:textColor="@color/texto_secundario"
+            android:textSize="14sp" />
 
         <!-- Card de login -->
         <LinearLayout
